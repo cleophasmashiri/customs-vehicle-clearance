@@ -1,0 +1,31 @@
+<h3>Pay Invoice</h3>
+<script cam-script type="text/form-script">
+    camForm.on('submit', function(evt) {
+      var fileUpload = $('#proofOfPaymentDocument').get(0);
+      // prevent submit if user has not provided a file
+      evt.submitPrevented = (fileUpload.files.length == 0);
+    });
+  </script>
+<form role="form" class="form-horizontal">
+    <div class="control-group">
+        <label class="control-label">Amount Paid</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="amountPaid"
+                   cam-variable-type="Double"
+                   required />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">Attach Proof of Payment Document</label>
+        <div class="controls">
+            <input type="file"
+                   id="passportDocument"
+                   cam-variable-name="proofOfPaymentDocument"
+                   cam-variable-type="File"
+                   cam-max-filesize="10000000"
+                   class="form-control" />
+        </div>
+    </div>
+</form>

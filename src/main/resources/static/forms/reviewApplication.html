@@ -1,0 +1,243 @@
+<h3>Review Vehicle Clearance Application</h3>
+<!--<script cam-script type="text/form-script">-->
+    <!--camForm.on('submit', function(evt) {-->
+
+      <!--var fileUpload = $('#passportDocument').get(0);-->
+
+      <!--// prevent submit if user has not provided a file-->
+      <!--evt.submitPrevented = (fileUpload.files.length == 0);-->
+
+    <!--});-->
+  <!--</script>-->
+<form role="form" class="form-horizontal">
+    <h4>Personal Details</h4>
+    <div class="control-group">
+        <label class="control-label">First Name</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="firstName"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Last Name</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="lastName"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Email Address</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="emailAddress"
+                   cam-variable-type="String"
+                   required
+                   ng-pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/"
+            />
+        </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">Passport Document</label>
+        <div class="controls">
+            <a cam-file-download="passportDocument"></a>
+            <!--<input type="file"-->
+                   <!--id="passportDocument"-->
+                   <!--cam-variable-name="passportDocument"-->
+                   <!--cam-variable-type="File"-->
+                   <!--cam-max-filesize="10000000"-->
+                   <!--class="form-control" />-->
+        </div>
+    </div>
+    <hr>
+    <h4>Vehicle Details</h4>
+    <div class="control-group">
+        <label class="control-label">Vehicle Make</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="vehicleMake"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Vehicle Model</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="vehicleModel"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Year Of Manufacture</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="yearOfManufacture"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Mileage</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="mileage"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">VIN</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="vin"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Engine Number</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="engineNumber"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Engine Capacity</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="engineCapacity"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Vehicle Type</label>
+        <div class="controls">
+            <select cam-variable-name="vehicleType"
+                    cam-variable-type="String"
+                    class="form-control" required>
+                <option>Sedan</option>
+                <option>Hatch Back</option>
+                <option>Four-by-Four</option>
+                <option>Four-by-Four</option>
+                <option>Bakkie</option>
+                <option>Truck</option>
+                <option>Bus</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Purchase Date</label>
+        <div class="controls">
+            <input type="Date" class="form-control"
+                   cam-variable-name="purchaseDate"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Purchase Price</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="purchasePrice"
+                   cam-variable-type="Double"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Date Of Change Of Ownership</label>
+        <div class="controls">
+            <input type="Date" class="form-control"
+                   cam-variable-name="dateOfChangeOfOwnership"
+                   cam-variable-type="String"
+                   required
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Sapco Document</label>
+        <div class="controls">
+            <a cam-file-download="sapcoDocument"></a>
+            <!--<input type="file"-->
+                   <!--id="sapcoDocument"-->
+                   <!--cam-variable-name="sapcoDocument"-->
+                   <!--cam-variable-type="File"-->
+                   <!--cam-max-filesize="10000000"-->
+                   <!--class="form-control"  />-->
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Itac Document</label>
+        <div class="controls">
+            <a cam-file-download="itacDocument"></a>
+            <!--<input type="file"-->
+                   <!--id="itacDocument"-->
+                   <!--cam-variable-name="itacDocument"-->
+                   <!--cam-variable-type="File"-->
+                   <!--cam-max-filesize="10000000"-->
+                   <!--class="form-control"  />-->
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Car Registration Document</label>
+        <div class="controls">
+            <a cam-file-download="registrationDocument"></a>
+            <!--<input type="file"-->
+                   <!--id="registrationDocument"-->
+                   <!--cam-variable-name="registrationDocument"-->
+                   <!--cam-variable-type="File"-->
+                   <!--cam-max-filesize="10000000"-->
+                   <!--class="form-control"  />-->
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Police Clearance Document</label>
+        <div class="controls">
+            <a cam-file-download="policeClearanceDocument"></a>
+            <!--<input type="file"-->
+                   <!--id="policeClearanceDocument"-->
+                   <!--cam-variable-name="policeClearanceDocument"-->
+                   <!--cam-variable-type="File"-->
+                   <!--cam-max-filesize="10000000"-->
+                   <!--class="form-control" />-->
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Notes</label>
+        <div class="controls">
+            <input type="text" class="form-control"
+                   cam-variable-name="notes"
+                   cam-variable-type="String"
+            />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Approve? </label>
+        <div class="controls">
+            <input cam-variable-name="customsOfficerApproved"
+                   cam-variable-type="Boolean"
+                   type="checkbox"
+                   name="customsOfficerApproved"
+                   class="form-control" />
+        </div>
+    </div>
+</form>
